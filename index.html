@@ -137,5 +137,29 @@
       <h1>Animal Logbook!</h1>
 
       <div class="status-box" id="status-box">Please Sign Up or Sign In.</div>
+
+      <form class="new-entry">
+        <fieldset class="form-group">
+          <legend>Make a new logbook entry</legend>
+          <label class="col-sm-12 col-form-label">
+            What type of animal was it?
+            <input type="text" class="form-control" name="animal-type">
+          </label>
+          <label class="col-sm-12 col-form-label">
+            What date did you see this animal?
+            <input type="text" class="form-control" name="date-seen">
+          </label>
+          <label class="col-sm-12 col-form-label">
+            Where did you see this animal?
+            <input type="text" class="form-control" name="location">
+          </label>
+          <label class="col-sm-12 col-form-label">
+            Enter a description of the animal!
+          </label>
+          <textarea class="form-control animal-description" rows="3" name="description"></textarea>
+          <input type="submit" class="form-control" name="submit" value="Create Entry">
+        </fieldset>
+      </form>
+
     </body>
 </html>
