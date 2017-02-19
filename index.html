@@ -1,165 +1,172 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- These buttons activate the corresponding modal, except sign out which does not have a modal -->
-      <div class="centered-buttons">
-      <button type="button" class="btn btn-primary account-modal-btn" id="signUpButton" data-toggle="modal" data-target="#signUpModal">
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+  <!-- These buttons activate the corresponding modal, except sign out which does not have a modal -->
+  <div class="centered-buttons">
+    <button type="button" class="btn btn-primary account-modal-btn" id="signUpButton" data-toggle="modal" data-target="#signUpModal">
         Sign Up!
       </button>
-      <button type="button" class="btn btn-primary account-modal-btn" id="signInButton" data-toggle="modal" data-target="#signInModal">
+    <button type="button" class="btn btn-primary account-modal-btn" id="signInButton" data-toggle="modal" data-target="#signInModal">
         Sign In!
       </button>
-      <button type="button" class="btn btn-primary account-modal-btn hidden" id="changePassButton" data-toggle="modal" data-target="#changePassModal">
+    <button type="button" class="btn btn-primary account-modal-btn hidden" id="changePassButton" data-toggle="modal" data-target="#changePassModal">
         Change Password!
       </button>
-      <button type="button" class="btn btn-primary hidden" id="sign-out">
+    <button type="button" class="btn btn-primary hidden" id="sign-out">
         Sign Out!
       </button>
-    </div>
+  </div>
 
-      <!-- Modals for sign up, sign in, and change password -->
-      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="signUpModalLabel">Please Sign Up!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <!-- Modals for sign up, sign in, and change password -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Please Sign Up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-      <form id="sign-up">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <label>
+        </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <label>
             Email
             <input type="text" name="credentials[email]">
           </label>
-          <label>
+              <label>
             Password
             <input type="password" name="credentials[password]">
           </label>
-          <label>
+              <label>
             Password Confirmation
             <input type="password" name="credentials[password_confirmation]">
           </label>
-          <input type="submit" name="submit" value="Sign up!">
-        </fieldset>
-        <div class="form-message" id="sign-up-message"></div>
-      </form>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+            <div class="form-message" id="sign-up-message"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="signInModalLabel">Please Sign In!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signInModalLabel">Please Sign In!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <form id="sign-in">
-          <fieldset>
-            <legend>Sign in!</legend>
-            <label>
+        </div>
+        <div class="modal-body">
+          <form id="sign-in">
+            <fieldset>
+              <legend>Sign in!</legend>
+              <label>
               Email
               <input type="text" name="credentials[email]">
             </label>
-            <label>
+              <label>
               Password
               <input type="password" name="credentials[password]">
             </label>
-            <input type="submit" name="submit" value="Sign in!">
-          </fieldset>
-          <div class="form-message" id="sign-in-message"></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+            <div class="form-message" id="sign-in-message"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal fade" id="changePassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="changePassModalLabel">Change Your Password!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <div class="modal fade" id="changePassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changePassModalLabel">Change Your Password!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <form id="change-password">
-          <fieldset>
-            <legend>Change Password!</legend>
-            <label>
+        </div>
+        <div class="modal-body">
+          <form id="change-password">
+            <fieldset>
+              <legend>Change Password!</legend>
+              <label>
               Current Password
               <input type="password" name="passwords[old]">
             </label>
-            <label>
+              <label>
               New Password
               <input type="password" name="passwords[new]">
             </label>
 
-            <input type="submit" name="submit" value="Change Password!">
-          </fieldset>
-          <div class="form-message" id="change-pass-message"></div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" name="submit" value="Change Password!">
+            </fieldset>
+            <div class="form-message" id="change-pass-message"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-      <h1>Animal Logbook!</h1>
+  <h1>Animal Logbook!</h1>
 
-      <div class="status-box" id="status-box">Please Sign Up or Sign In.</div>
+  <div class="status-box" id="status-box">Please Sign Up or Sign In.</div>
 
-      <form class="new-entry">
-        <fieldset class="form-group">
-          <legend>Make a new logbook entry</legend>
-          <label class="col-sm-12 col-form-label">
+  <form class="new-entry">
+    <fieldset class="form-group">
+      <legend>Make a new logbook entry</legend>
+      <label class="col-sm-12 col-form-label">
             What type of animal was it?
-            <input type="text" class="form-control" name="animal-type">
+            <input type="text" class="form-control" name="post[animal_type]">
           </label>
-          <label class="col-sm-12 col-form-label">
+      <label class="col-sm-12 col-form-label">
             What date did you see this animal?
-            <input type="text" class="form-control" name="date-seen">
+            <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="post[date_seen]">
           </label>
-          <label class="col-sm-12 col-form-label">
+      <label class="col-sm-12 col-form-label">
             Where did you see this animal?
-            <input type="text" class="form-control" name="location">
+            <input type="text" class="form-control" name="post[location]">
           </label>
-          <label class="col-sm-12 col-form-label">
+      <label class="col-sm-12 col-form-label">
             Enter a description of the animal!
           </label>
-          <textarea class="form-control animal-description" rows="3" name="description"></textarea>
-          <input type="submit" class="form-control" name="submit" value="Create Entry">
-        </fieldset>
-      </form>
+      <textarea class="form-control animal-description" rows="3" name="post[description]"></textarea>
+      <input type="submit" class="form-control" id="create-entry-button" name="submit" value="Create Entry">
+    </fieldset>
+  </form>
 
-    </body>
+  <button type="button" id="get-index-button" class="btn btn-primary">Get Index</button>
+
+  <div id="entry-container"></div>
+
+</body>
+
 </html>
