@@ -31,10 +31,15 @@ const failure = (data) => {
   console.log(data);
 };
 
+const removePost = () => {
+  console.log(this.id);
+};
+
 module.exports = {
   failure,
   success,
   createSuccess,
   indexSuccess,
+  removePost
   // onPatchSuccess,
 };

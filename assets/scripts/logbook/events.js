@@ -1,7 +1,7 @@
 'use strict';
 
 const logApi = require('./api');
-const store = require('../store');
+// const store = require('../store');
 const logUi = require('./ui');
 const getFormFields = require('../../../lib/get-form-fields');
 
@@ -31,9 +31,16 @@ const onCreate = function (event) {
 //     .catch(logUi.failure);
 // };
 
+const onRemovePost = (event) => {
+  event.preventDefault();
+  // console.log(event.target.post.id);
+  logUi.removePost();
+};
+
 const addAjaxHandlers = () => {
   $('#get-index-button').on('click', onIndex);
   $('#create-entry').on('submit', onCreate);
+  $('#entry-container').on('click', '#removePost', onRemovePost);
   // $('#showGameById').on('submit', onShow);
 };
 
