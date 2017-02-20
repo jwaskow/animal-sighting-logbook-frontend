@@ -1,9 +1,9 @@
 'use strict';
 
 const logApi = require('./api');
-// const logStore = require('./gameStore');
+const store = require('../store');
 const logUi = require('./ui');
-// const getFormFields = require('../../../lib/getFormFields');
+const getFormFields = require('../../../lib/get-form-fields');
 
 const onIndex = function (event) {
   event.preventDefault();
@@ -14,28 +14,31 @@ const onIndex = function (event) {
 
 const onCreate = function (event) {
   event.preventDefault();
-  // let data = getFormFields(event.target);
+  let data = getFormFields(event.target);
   logApi.create(data)
+  // .then((response) => {
+  //   store.post = response.post;
+  // })
     .then(logUi.createSuccess)
     .catch(logUi.failure);
 };
 
-const onShow = function (event) {
-  event.preventDefault();
-  // let id = parseInt($('#game-id').val());
-  logApi.show(id)
-    .then(logUi.success)
-    .catch(logUi.failure);
-};
+// const onShow = function (event) {
+//   event.preventDefault();
+//   // let id = parseInt($('#game-id').val());
+//   logApi.show(id)
+//     .then(logUi.success)
+//     .catch(logUi.failure);
+// };
 
 const addAjaxHandlers = () => {
   $('#get-index-button').on('click', onIndex);
-  $('#create-entry-button').on('submit', onCreate);
+  $('#create-entry').on('submit', onCreate);
   // $('#showGameById').on('submit', onShow);
 };
 
 module.exports = {
   addAjaxHandlers,
-  // onIndex,
-  onShow,
+  onIndex,
+  // onShow,
 };

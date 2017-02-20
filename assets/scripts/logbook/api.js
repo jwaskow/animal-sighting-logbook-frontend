@@ -13,15 +13,15 @@ const getIndex = function () {
   });
 };
 
-const show = function (id) {
-  return $.ajax({
-    url: config.apiOrigin + '/posts/' + id,
-    method: 'GET',
-    headers: {
-      Authorization: `Token token=${store.user.token}`,
-    },
-  });
-};
+// const show = function (id) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/posts/' + id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`,
+//     },
+//   });
+// };
 
 const create = function (data) {
   return $.ajax({
@@ -37,7 +37,7 @@ const create = function (data) {
 module.exports = {
   getIndex,
   create,
-  show,
+  // show,
   // update,
   // updateGameStatus,
 };
