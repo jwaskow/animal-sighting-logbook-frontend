@@ -1,14 +1,16 @@
 
 'use strict';
 
+const indexHandlebars = require('../templates/posts-listing.handlebars');
+
 const success = () => {
   $('#status-box').text('Action Successful');
 };
 
 const indexSuccess = (data) => {
-  for (let i = 0; i < data.length; i++) {
-    $('#entry-container').append(data[i].animal_type);
-  }
+  console.log(data);
+  let postsIndexHtml = indexHandlebars({ posts: data.posts });
+    $('#entry-container').html(postsIndexHtml);
 };
 
 // const indexSuccess = () => {
