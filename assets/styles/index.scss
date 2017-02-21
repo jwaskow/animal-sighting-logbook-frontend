@@ -19,8 +19,16 @@ textarea {
 //   width: 25%;
 // }
 
+.status-box {
+  text-align: right;
+}
+
 .entry-form-container {
   width: 50%;
   text-align: center;
   margin: 0 auto;
+}
+
+.hidden {
+     display:none;
 }

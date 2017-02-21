@@ -23,6 +23,15 @@ const onCreate = function (event) {
     .catch(logUi.failure);
 };
 
+const onUpdate = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  let id = event.target.getAttribute('data-id');
+  logApi.create(id, data)
+    .then(logUi.updateSuccess)
+    .catch(logUi.failure);
+};
+
 // const onShow = function (event) {
 //   event.preventDefault();
 //   // let id = parseInt($('#game-id').val());
@@ -35,15 +44,27 @@ const onRemovePost = (event) => {
   event.preventDefault();
   let id = event.target.getAttribute('data-id');
   console.log(id);
+  $(event.target).parent.parent.remove();
   logApi.destroy(id)
     .then(logUi.removePostSuccess)
     .catch(logUi.failure);
 };
 
+// const revealDelete = (event) => {
+//   console.log($(event.target).attr("data-id"));
+//   console.log($(event.currentTarget).attr("data-id"));
+//   console.log($('.deleteConfirmation').attr("data-id"));
+//   // if (($(event.target).attr("data-id")) === ($('.deleteConfirmation').attr("data-id"))) {
+//   //   ($('.deleteConfirmation').attr("data-id")).removeClass('hidden');
+//   // }
+//   ($(event.currentTarget.'.deleteConfirmation').attr("data-id")).removeClass('hidden');
+// };
+
 const addAjaxHandlers = () => {
   $('#get-index-button').on('click', onIndex);
   $('#create-entry').on('submit', onCreate);
   $('#entry-container').on('click', '#removePost', onRemovePost);
+  // $('#entry-container').on('click', '.deletePostPrompt', revealDelete);
   // $('#showGameById').on('submit', onShow);
 };
 

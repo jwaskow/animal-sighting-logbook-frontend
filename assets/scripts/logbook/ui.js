@@ -13,12 +13,15 @@ const indexSuccess = (data) => {
     $('#entry-container').html(postsIndexHtml);
 };
 
-// const indexSuccess = () => {
-//   $('#entry-container').append(parseResponse());
-// };
-
 const createSuccess = (data) => {
-  $('#status-box').text('New Game Successfully Created');
+  $('#status-box').text('New Entry Successfully Created');
+  $('input[type="text"], input[type="date"], textarea').val('');
+  console.log(data);
+};
+
+const updateSuccess = (data) => {
+  $('#status-box').text('Entry Successfully Updated');
+  $('input[type="text"], textarea').val('');
   console.log(data);
 };
 
@@ -28,11 +31,11 @@ const createSuccess = (data) => {
 
 const failure = (data) => {
   $('#status-box').text('There seems to have been an error');
-  // console.log(data);
+  console.log(data);
 };
 
-const removePostSuccess = () => {
-  $('#entry-container').remove(event.target.id);
+const removePostSuccess = (event) => {
+  $(event.target).parent.parent.remove();
 };
 
 module.exports = {
@@ -41,5 +44,6 @@ module.exports = {
   createSuccess,
   indexSuccess,
   removePostSuccess,
+  updateSuccess,
   // onPatchSuccess,
 };

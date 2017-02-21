@@ -34,16 +34,16 @@ const create = function (data) {
   });
 };
 
-// const update = function (id, data) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/posts/' + id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`,
-//     },
-//     data,
-//   });
-// };
+const update = function (id, data) {
+  return $.ajax({
+    url: config.apiOrigin + '/posts/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
+    data,
+  });
+};
 
 const destroy = function (id) {
   return $.ajax({
@@ -59,7 +59,7 @@ module.exports = {
   getIndex,
   create,
   // show,
-  // update,
+  update,
   destroy,
   // updateGameStatus,
 };
