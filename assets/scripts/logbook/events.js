@@ -26,8 +26,10 @@ const onCreate = function (event) {
 const onUpdate = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
-  let id = event.target.getAttribute('data-id');
-  logApi.create(id, data)
+  let id = data.post.id;
+  console.log(data);
+  console.log(id);
+  logApi.update(id, data)
     .then(logUi.updateSuccess)
     .catch(logUi.failure);
 };
@@ -44,7 +46,6 @@ const onRemovePost = (event) => {
   event.preventDefault();
   let id = event.target.getAttribute('data-id');
   console.log(id);
-  $(event.target).parent.parent.remove();
   logApi.destroy(id)
     .then(logUi.removePostSuccess)
     .catch(logUi.failure);
@@ -60,10 +61,16 @@ const onRemovePost = (event) => {
 //   ($(event.currentTarget.'.deleteConfirmation').attr("data-id")).removeClass('hidden');
 // };
 
+const unhideUpdate = () => {
+  $('#update-entry').removeClass('hidden');
+};
+
 const addAjaxHandlers = () => {
   $('#get-index-button').on('click', onIndex);
   $('#create-entry').on('submit', onCreate);
   $('#entry-container').on('click', '#removePost', onRemovePost);
+  $('#show-update-form').on('click', unhideUpdate);
+  $('#update-entry').on('submit', onUpdate);
   // $('#entry-container').on('click', '.deletePostPrompt', revealDelete);
   // $('#showGameById').on('submit', onShow);
 };

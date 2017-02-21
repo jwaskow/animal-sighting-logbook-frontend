@@ -21,7 +21,8 @@ const createSuccess = (data) => {
 
 const updateSuccess = (data) => {
   $('#status-box').text('Entry Successfully Updated');
-  $('input[type="text"], textarea').val('');
+  $('input[type="text"], input[type="date"], textarea').val('');
+  $('#update-entry').addClass('hidden');
   console.log(data);
 };
 
