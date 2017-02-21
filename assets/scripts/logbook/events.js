@@ -33,8 +33,11 @@ const onCreate = function (event) {
 
 const onRemovePost = (event) => {
   event.preventDefault();
-  // console.log(event.target.post.id);
-  logUi.removePost();
+  let id = event.target.getAttribute('data-id');
+  console.log(id);
+  logApi.destroy(id)
+    .then(logUi.removePostSuccess)
+    .catch(logUi.failure);
 };
 
 const addAjaxHandlers = () => {

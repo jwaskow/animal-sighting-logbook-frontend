@@ -28,11 +28,11 @@ const createSuccess = (data) => {
 
 const failure = (data) => {
   $('#status-box').text('There seems to have been an error');
-  console.log(data);
+  // console.log(data);
 };
 
-const removePost = () => {
-  console.log(this.id);
+const removePostSuccess = () => {
+  $('#entry-container').remove(event.target.id);
 };
 
 module.exports = {
@@ -40,6 +40,6 @@ module.exports = {
   success,
   createSuccess,
   indexSuccess,
-  removePost
+  removePostSuccess,
   // onPatchSuccess,
 };

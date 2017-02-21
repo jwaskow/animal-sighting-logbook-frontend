@@ -14,7 +14,12 @@
       Here's a description of this animal: {{post.description}}
   </li>
   </ul>
-  <button id="removePost">Remove</button>
+  <p>Post ID: {{post.id}}</p>
+  <!-- <form>
+    <input type="text" name="post[id]">
+    <input type="submit" id="removePost" value="Remove">
+  </form> -->
+  <button id="removePost" data-id="{{post.id}}">Remove</button>
   </div>
 
 {{/each}}
