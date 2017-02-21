@@ -20,6 +20,8 @@ const onCreate = function (event) {
   //   store.post = response.post;
   // })
     .then(logUi.createSuccess)
+    .then(logApi.getIndex)
+    .then(logUi.indexSuccess)
     .catch(logUi.failure);
 };
 
@@ -31,6 +33,8 @@ const onUpdate = function (event) {
   console.log(id);
   logApi.update(id, data)
     .then(logUi.updateSuccess)
+    .then(logApi.getIndex)
+    .then(logUi.indexSuccess)
     .catch(logUi.failure);
 };
 
@@ -48,6 +52,8 @@ const onRemovePost = (event) => {
   console.log(id);
   logApi.destroy(id)
     .then(logUi.removePostSuccess)
+    .then(logApi.getIndex)
+    .then(logUi.indexSuccess)
     .catch(logUi.failure);
 };
 

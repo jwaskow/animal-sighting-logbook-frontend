@@ -35,8 +35,8 @@ const failure = (data) => {
   console.log(data);
 };
 
-const removePostSuccess = (event) => {
-  $(event.target).parent.parent.remove();
+const removePostSuccess = () => {
+  // $(event.target).parent.parent.remove();
 };
 
 module.exports = {
