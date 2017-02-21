@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    // production: 'https://dry-falls-97353.herokuapp.com/',
+    production: 'https://dry-falls-97353.herokuapp.com/',
     development: 'http://localhost:4741/'
   },
 };
