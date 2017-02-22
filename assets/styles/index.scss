@@ -15,16 +15,41 @@ textarea {
   margin-bottom: 10px;
 }
 
+body {
+  background-color: #CAF9B1;
+}
+
+.main-title {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+  font-size: 48px;
+}
+
 // .form-control {
 //   width: 25%;
 // }
 
 .status-box {
   text-align: right;
+  font-family: 'Varela', sans-serif;
+  font-size: 16px;
 }
 
 .auth-button {
   margin-top: 5px;
+}
+
+.form-background {
+  font-family: 'Varela', sans-serif;
+}
+
+.handlebars-entry-container {
+  font-family: 'Varela', sans-serif;
+  color: #0A1405;
+}
+
+.postData {
+  color: #0A1405;
 }
 
 .entry-form-container {
@@ -68,6 +93,24 @@ textarea {
 
 .handlebars-container li {
   list-style: none;
+}
+
+.entry-text li {
+  font-size: 24;
+}
+
+.btn-primary {
+  background-color: #B0CCEF;
+  box-shadow: inset 0 0 10px #809CC1;
+  color: #73726E;
+}
+
+.btn-success {
+  background-color: #4B914B;
+}
+
+.btn-primary:hover {
+  background-color: #54739A;
 }
 
 .carousel-caption {

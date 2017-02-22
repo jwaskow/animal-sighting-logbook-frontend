@@ -7,6 +7,8 @@
 
   <!-- Do not add `link` tags unless you know what you are doing -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
 
   <!-- Do not add `script` tags unless you know what you are doing -->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -136,14 +138,14 @@
     </div>
   </div>
 
-  <h1>Animal Logbook!</h1>
-
   <div class="status-box" id="status-box">Please Sign Up or Sign In.</div>
+
+  <h1 class="main-title">Animal Sighting Logbook</h1>
 
   <div class="form-background">
   <form class="col-xs-7 new-entry hidden" id="create-entry">
     <fieldset class="form-group entry-form-container">
-      <legend>Make a new logbook entry</legend>
+      <legend>Make a new Logbook Entry</legend>
       <div class="col-sm-8 left-column-entry">
       <label class="col-sm-12 col-form-label form-inline">
             Animal Type
@@ -170,7 +172,7 @@
 
   <form class="col-xs-7 new-entry hidden" id="update-entry">
     <fieldset class="form-group entry-form-container">
-      <legend>Update an existing logbook entry</legend>
+      <legend>Update an existing Logbook Entry</legend>
       <div class="col-sm-8 left-column-entry">
       <label class="col-sm-12 col-form-label form-inline">
             Post ID
@@ -251,7 +253,7 @@
   <button type="button" id="get-index-button" class="btn btn-primary hidden">Get Index</button>
   <button type="button" id="show-update-form" class="btn btn-primary hidden">Update an Entry</button>
 
-  <div id="entry-container"></div>
+  <div id="entry-container" class="handlebars-entry-container"></div>
 </div>
 
 </body>
