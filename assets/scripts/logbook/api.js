@@ -13,16 +13,6 @@ const getIndex = function () {
   });
 };
 
-// const show = function (id) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/posts/' + id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`,
-//     },
-//   });
-// };
-
 const create = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/posts',
@@ -58,8 +48,6 @@ const destroy = function (id) {
 module.exports = {
   getIndex,
   create,
-  // show,
   update,
   destroy,
-  // updateGameStatus,
 };

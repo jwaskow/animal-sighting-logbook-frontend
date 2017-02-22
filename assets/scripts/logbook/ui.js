@@ -8,32 +8,24 @@ const success = () => {
 };
 
 const indexSuccess = (data) => {
-  console.log(data);
   let postsIndexHtml = indexHandlebars({ posts: data.posts });
     $('#entry-container').html(postsIndexHtml);
 };
 
-const createSuccess = (data) => {
+const createSuccess = () => {
   $('#status-box').text('New Entry Successfully Created');
   $('.create-field').val('');
-  console.log(data);
 };
 
-const updateSuccess = (data) => {
+const updateSuccess = () => {
   $('#status-box').text('Entry Successfully Updated');
   $('.update-field').val('');
   $('#update-entry').addClass('hidden');
   $('#create-entry').removeClass('hidden');
-  console.log(data);
 };
 
-// const onPatchSuccess = () => {
-//   $('#status-box').text('Game successfully updated');
-// };
-
-const failure = (data) => {
+const failure = () => {
   $('#status-box').text('There seems to have been an error');
-  console.log(data);
 };
 
 const removePostSuccess = () => {
@@ -47,5 +39,4 @@ module.exports = {
   indexSuccess,
   removePostSuccess,
   updateSuccess,
-  // onPatchSuccess,
 };
