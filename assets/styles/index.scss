@@ -23,8 +23,11 @@ textarea {
   text-align: right;
 }
 
+.auth-button {
+  margin-top: 5px;
+}
+
 .entry-form-container {
-  width: 60%;
   text-align: center;
 }
 
@@ -56,10 +59,15 @@ textarea {
 .update-buttons {
   margin: 0 auto;
   text-align: center;
+  clear: both;
 }
 
 .handlebars-container li {
   list-style: none;
+}
+
+.carousel-caption {
+  visibility: hidden;
 }
 
 // .handlebars-container {

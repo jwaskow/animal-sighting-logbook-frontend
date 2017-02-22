@@ -17,16 +17,16 @@
 
   <!-- These buttons activate the corresponding modal, except sign out which does not have a modal -->
   <div class="centered-buttons">
-    <button type="button" class="btn btn-primary account-modal-btn" id="signUpButton" data-toggle="modal" data-target="#signUpModal">
+    <button type="button" class="btn btn-primary account-modal-btn auth-button" id="signUpButton" data-toggle="modal" data-target="#signUpModal">
         Sign Up!
       </button>
-    <button type="button" class="btn btn-primary account-modal-btn" id="signInButton" data-toggle="modal" data-target="#signInModal">
+    <button type="button" class="btn btn-primary account-modal-btn auth-button" id="signInButton" data-toggle="modal" data-target="#signInModal">
         Sign In!
       </button>
-    <button type="button" class="btn btn-primary account-modal-btn hidden" id="changePassButton" data-toggle="modal" data-target="#changePassModal">
+    <button type="button" class="btn btn-primary account-modal-btn hidden auth-button" id="changePassButton" data-toggle="modal" data-target="#changePassModal">
         Change Password!
       </button>
-    <button type="button" class="btn btn-primary hidden" id="sign-out">
+    <button type="button" class="btn btn-primary hidden auth-button" id="sign-out">
         Sign Out!
       </button>
   </div>
@@ -140,7 +140,7 @@
 
   <div class="status-box" id="status-box">Please Sign Up or Sign In.</div>
 
-  <form class="new-entry hidden" id="create-entry">
+  <form class="col-xs-7 new-entry hidden" id="create-entry">
     <fieldset class="form-group entry-form-container">
       <legend>Make a new logbook entry</legend>
       <div class="col-sm-8 left-column-entry">
@@ -167,7 +167,7 @@
     </fieldset>
   </form>
 
-  <form class="new-entry hidden" id="update-entry">
+  <form class="col-xs-7 new-entry hidden" id="update-entry">
     <fieldset class="form-group entry-form-container">
       <legend>Update an existing logbook entry</legend>
       <div class="col-sm-8 left-column-entry">
@@ -201,10 +201,56 @@
     </fieldset>
   </form>
 
+  <div id="carousel-animals" class="carousel slide col-xs-5 hidden" data-interval="3500" data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="assets/images/red-fox.jpg" alt="red fox">
+      <div class="carousel-caption">
+        A Red Fox
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/owl.jpg" alt="owl">
+      <div class="carousel-caption">
+        Great Horned Owl
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/panda.jpg" alt="panda">
+      <div class="carousel-caption">
+        Giant Panda
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/panther-chameleon.jpg" alt="panther chameleon">
+      <div class="carousel-caption">
+        Panther Chameleon
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/elephants.jpg" alt="elephants">
+      <div class="carousel-caption">
+        Elephants
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/images/red-panda.jpg" alt="red panda">
+      <div class="carousel-caption">
+        Red Panda
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-xs-12">
   <button type="button" id="get-index-button" class="btn btn-primary hidden">Get Index</button>
   <button type="button" id="show-update-form" class="btn btn-primary hidden">Update an Entry</button>
 
   <div id="entry-container"></div>
+</div>
 
 </body>
 
