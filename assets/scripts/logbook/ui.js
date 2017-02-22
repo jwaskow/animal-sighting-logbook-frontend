@@ -37,7 +37,7 @@ const failure = (data) => {
 };
 
 const removePostSuccess = () => {
-  // $(event.target).parent.parent.remove();
+  $('#status-box').text('Entry Removed');
 };
 
 module.exports = {

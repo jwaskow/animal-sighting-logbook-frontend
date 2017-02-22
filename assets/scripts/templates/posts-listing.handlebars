@@ -1,17 +1,17 @@
 {{#each posts as |post|}}
 
  <!-- Developers, why are we using data-id and not just id? -->
-  <h1 class="postData" data-id="{{post.id}}"> <small>Animal Type: {{post.animal_type}}</small></h1>
-  <div class="handlebars-container">
+  <div class="handlebars-container col-xs-4">
+    <h1 class="postData" data-id="{{post.id}}"> <small>Animal Type: {{post.animal_type}}</small></h1>
     <ul>
     <li>
-      I saw this animal at: {{post.location}}
+      Location of Sighting: {{post.location}}
   </li>
   <li>
-      The date I saw this animal was: {{post.date_seen}}
+      Date of Sighting: {{post.date_seen}}
   </li>
   <li>
-      Here's a description of this animal: {{post.description}}
+      Description of Animal: {{post.description}}
   </li>
   <li>
   <p>Post ID: {{post.id}}</p>

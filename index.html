@@ -84,11 +84,11 @@
               <legend>Sign in!</legend>
               <label>
               Email
-              <input type="text" id="account-name-signin" name="credentials[email]">
+              <input type="text" class="signin-field" id="account-name-signin" name="credentials[email]">
             </label>
               <label>
               Password
-              <input type="password" name="credentials[password]">
+              <input type="password" class="signin-field" name="credentials[password]">
             </label>
               <input type="submit" name="submit" value="Sign in!">
             </fieldset>
@@ -117,11 +117,11 @@
               <legend>Change Password!</legend>
               <label>
               Current Password
-              <input type="password" name="passwords[old]">
+              <input type="password" class="change-pass-field" name="passwords[old]">
             </label>
               <label>
               New Password
-              <input type="password" name="passwords[new]">
+              <input type="password" class="change-pass-field" name="passwords[new]">
             </label>
 
               <input type="submit" name="submit" value="Change Password!">
@@ -143,51 +143,61 @@
   <form class="new-entry hidden" id="create-entry">
     <fieldset class="form-group entry-form-container">
       <legend>Make a new logbook entry</legend>
-      <label class="col-sm-12 col-form-label">
-            What type of animal was it?
+      <div class="col-sm-8 left-column-entry">
+      <label class="col-sm-12 col-form-label form-inline">
+            Animal Type
             <input type="text" class="create-field form-control" name="post[animal_type]">
           </label>
-      <label class="col-sm-12 col-form-label">
-            What date did you see this animal?
+      <label class="col-sm-12 col-form-label form-inline">
+            Date of Sighting
             <input type="date" class="create-field form-control" placeholder="yyyy-mm-dd" name="post[date_seen]">
           </label>
-      <label class="col-sm-12 col-form-label">
-            Where did you see this animal?
+      <label class="col-sm-12 col-form-label form-inline">
+            Location
             <input type="text" class="create-field form-control" name="post[location]">
           </label>
+        </div>
+        <div class="col-sm-4">
       <label class="col-sm-12 col-form-label">
-            Enter a description of the animal!
+            Animal Description
           </label>
       <textarea class="create-field form-control animal-description" rows="3" name="post[description]"></textarea>
-      <input type="submit" class="form-control" id="create-entry-button" name="submit" value="Create Entry">
+    </div>
+      <input type="submit" class="form-control btn-success create-entry-button" id="create-entry-button" name="submit" value="Create Entry">
     </fieldset>
   </form>
 
   <form class="new-entry hidden" id="update-entry">
     <fieldset class="form-group entry-form-container">
       <legend>Update an existing logbook entry</legend>
-      <label class="col-sm-12 col-form-label">
-            ID of the entry to be updated
+      <div class="col-sm-8 left-column-entry">
+      <label class="col-sm-12 col-form-label form-inline">
+            Post ID
             <input type="text" id="updateId" class="update-field form-control" name="post[id]">
           </label>
-      <label class="col-sm-12 col-form-label">
-            What type of animal was it?
+      <label class="col-sm-12 col-form-label form-inline">
+            Animal Type
             <input type="text" class="update-field form-control" name="post[animal_type]">
           </label>
-      <label class="col-sm-12 col-form-label">
-            What date did you see this animal?
+      <label class="col-sm-12 col-form-label form-inline">
+            Date of Sighting
             <input type="date" class="update-field form-control" placeholder="yyyy-mm-dd" name="post[date_seen]">
           </label>
-      <label class="col-sm-12 col-form-label">
-            Where did you see this animal?
+      <label class="col-sm-12 col-form-label form-inline">
+            Location
             <input type="text" class="update-field form-control" name="post[location]">
           </label>
+        </div>
+        <div class="col-sm-4">
       <label class="col-sm-12 col-form-label">
-            Enter a description of the animal!
+            Animal Description
           </label>
       <textarea class="update-field form-control animal-description" rows="3" name="post[description]"></textarea>
-      <input type="submit" class="form-control" id="update-entry-button" name="submit" value="Update Entry">
-      <button type="button" id="cancel-update" class="btn btn-primary">Cancel Update</button>
+    </div>
+    <div class="update-buttons">
+      <input type="submit" class="form-control btn-success update-entry-button form-inline" id="update-entry-button" name="submit" value="Update Entry">
+      <button type="button" id="cancel-update" class="btn btn-danger form-control cancel-update form-inline">Cancel Update</button>
+    </div>
     </fieldset>
   </form>
 

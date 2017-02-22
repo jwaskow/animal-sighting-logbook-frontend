@@ -22,6 +22,7 @@ const signInFail = () => {
 const changePassSuccess = () => {
   $('#status-box').text('Password Changed Successfully');
   $('#changePassModal').modal('hide');
+  $('.change-pass-field').val('');
 };
 
 const changePassFail = () => {
@@ -42,6 +43,7 @@ const signInSuccess = () => {
   $('#changePassButton').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#signInModal').modal('hide');
+  $('.signin-field').val('');
   $('#create-entry').removeClass('hidden');
   $('#get-index-button').removeClass('hidden');
   $('#show-update-form').removeClass('hidden');
@@ -56,6 +58,7 @@ const signOutSuccess = () => {
   $('#changePassButton').addClass('hidden');
   $('#sign-out').addClass('hidden');
   $('#create-entry').addClass('hidden');
+  $('#update-entry').addClass('hidden');
   $('#get-index-button').addClass('hidden');
   $('#show-update-form').addClass('hidden');
   $('#entry-container').html('');

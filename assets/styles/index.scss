@@ -24,9 +24,42 @@ textarea {
 }
 
 .entry-form-container {
-  width: 50%;
+  width: 60%;
+  text-align: center;
+}
+
+.left-column-entry {
+  text-align: right;
+}
+
+.create-entry-button {
+  width: 30%;
+  clear: both;
   text-align: center;
   margin: 0 auto;
+}
+
+.update-entry-button {
+  width: 30%;
+  clear: both;
+  float: left;
+  text-align: center;
+}
+
+.cancel-update {
+  width: 30%;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.update-buttons {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.handlebars-container li {
+  list-style: none;
 }
 
 // .handlebars-container {
@@ -35,5 +68,5 @@ textarea {
 // }
 
 .hidden {
-     display: none;
+  display: none;
 }
