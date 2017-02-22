@@ -15,14 +15,15 @@ const indexSuccess = (data) => {
 
 const createSuccess = (data) => {
   $('#status-box').text('New Entry Successfully Created');
-  $('input[type="text"], input[type="date"], textarea').val('');
+  $('.create-field').val('');
   console.log(data);
 };
 
 const updateSuccess = (data) => {
   $('#status-box').text('Entry Successfully Updated');
-  $('input[type="text"], input[type="date"], textarea').val('');
+  $('.update-field').val('');
   $('#update-entry').addClass('hidden');
+  $('#create-entry').removeClass('hidden');
   console.log(data);
 };
 

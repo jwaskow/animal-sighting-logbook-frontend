@@ -69,6 +69,14 @@ const onRemovePost = (event) => {
 
 const unhideUpdate = () => {
   $('#update-entry').removeClass('hidden');
+  $('#create-entry').addClass('hidden');
+};
+
+const hideUpdate = () => {
+  $('#status-box').text('Update Cancelled');
+  $('.update-field').val('');
+  $('#update-entry').addClass('hidden');
+  $('#create-entry').removeClass('hidden');
 };
 
 const addAjaxHandlers = () => {
@@ -77,6 +85,7 @@ const addAjaxHandlers = () => {
   $('#entry-container').on('click', '#removePost', onRemovePost);
   $('#show-update-form').on('click', unhideUpdate);
   $('#update-entry').on('submit', onUpdate);
+  $('#cancel-update').on('click', hideUpdate);
   // $('#entry-container').on('click', '.deletePostPrompt', revealDelete);
   // $('#showGameById').on('submit', onShow);
 };

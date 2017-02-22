@@ -5,8 +5,10 @@ const success = () => {
 };
 
 const signUpSuccess = () => {
-  $('#status-box').text('Account Created');
+  let account = $('#account-name').val();
+  $('#status-box').text('Account Created: ' + account);
   $('#signUpModal').modal('hide');
+  $('.signup-field').val('');
 };
 
 const signUpFail = () => {
@@ -32,13 +34,17 @@ const failure = () => {
 
 // On sign in, un-hide game board elements
 const signInSuccess = () => {
-  $('#status-box').text('Sign In Successful');
+  let account = $('#account-name-signin').val();
+  $('#status-box').text(account + ' has successfully signed in');
 
   $('#signUpButton').addClass('hidden');
   $('#signInButton').addClass('hidden');
   $('#changePassButton').removeClass('hidden');
   $('#sign-out').removeClass('hidden');
   $('#signInModal').modal('hide');
+  $('#create-entry').removeClass('hidden');
+  $('#get-index-button').removeClass('hidden');
+  $('#show-update-form').removeClass('hidden');
 };
 
 // On sign out, hide game board elements
@@ -49,6 +55,10 @@ const signOutSuccess = () => {
   $('#signInButton').removeClass('hidden');
   $('#changePassButton').addClass('hidden');
   $('#sign-out').addClass('hidden');
+  $('#create-entry').addClass('hidden');
+  $('#get-index-button').addClass('hidden');
+  $('#show-update-form').addClass('hidden');
+  $('#entry-container').html('');
 };
 
 module.exports = {
