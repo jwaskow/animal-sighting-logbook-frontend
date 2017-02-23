@@ -176,7 +176,7 @@
       <div class="col-sm-8 left-column-entry">
       <label class="col-sm-12 col-form-label form-inline">
             Post ID
-            <input type="text" id="updateId" class="update-field form-control" name="post[id]">
+            <input type="text" id="updateId" placeholder="Displayed in Entry" class="update-field form-control" name="post[id]">
           </label>
       <label class="col-sm-12 col-form-label form-inline">
             Animal Type
@@ -249,8 +249,10 @@
 </div>
 </div>
 
+<div id="message-box" class="message-box"></div>
+
 <div class="col-xs-12">
-  <button type="button" id="get-index-button" class="btn btn-primary hidden">Get Index</button>
+  <button type="button" id="get-index-button" class="btn btn-primary hidden">Get All Entries</button>
   <button type="button" id="show-update-form" class="btn btn-primary hidden">Update an Entry</button>
 
   <div id="entry-container" class="handlebars-entry-container"></div>

@@ -46,7 +46,6 @@ const signInSuccess = () => {
   $('.signin-field').val('');
   $('#create-entry').removeClass('hidden');
   $('#get-index-button').removeClass('hidden');
-  $('#show-update-form').removeClass('hidden');
   $('#carousel-animals').removeClass('hidden');
 };
 
@@ -64,6 +63,7 @@ const signOutSuccess = () => {
   $('#show-update-form').addClass('hidden');
   $('#entry-container').html('');
   $('#carousel-animals').addClass('hidden');
+  $('#message-box').html('');
 };
 
 module.exports = {
