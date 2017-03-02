@@ -21,11 +21,13 @@ const indexSuccess = (data) => {
 
 const createSuccess = () => {
   $('#status-box').text('New Entry Successfully Created');
+  $('.create-entry-message').text('');
   $('.create-field').val('');
 };
 
 const updateSuccess = () => {
   $('#status-box').text('Entry Successfully Updated');
+  $('.update-entry-message').text('');
   $('.update-field').val('');
   $('#update-entry').addClass('hidden');
   $('#create-entry').removeClass('hidden');
@@ -33,6 +35,14 @@ const updateSuccess = () => {
 
 const failure = () => {
   $('#status-box').text('There seems to have been an error');
+};
+
+const createEntryFailure = () => {
+  $('.create-entry-message').text('Please fill out all fields with the proper input');
+};
+
+const updateEntryFailure = () => {
+  $('.update-entry-message').text('Please fill out all fields with the proper input');
 };
 
 const removePostSuccess = () => {
@@ -46,4 +56,6 @@ module.exports = {
   indexSuccess,
   removePostSuccess,
   updateSuccess,
+  createEntryFailure,
+  updateEntryFailure,
 };

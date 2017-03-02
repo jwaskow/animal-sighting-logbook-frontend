@@ -18,7 +18,7 @@ const onCreate = function (event) {
     .then(logUi.createSuccess)
     .then(logApi.getIndex)
     .then(logUi.indexSuccess)
-    .catch(logUi.failure);
+    .catch(logUi.createEntryFailure);
 };
 
 const onUpdate = function (event) {
@@ -29,7 +29,7 @@ const onUpdate = function (event) {
     .then(logUi.updateSuccess)
     .then(logApi.getIndex)
     .then(logUi.indexSuccess)
-    .catch(logUi.failure);
+    .catch(logUi.updateEntryFailure);
 };
 
 const onRemovePost = (event) => {
@@ -49,6 +49,8 @@ const unhideUpdate = () => {
 
 const hideUpdate = () => {
   $('#status-box').text('Update Cancelled');
+  $('.create-entry-message').text('');
+  $('.update-entry-message').text('');
   $('.update-field').val('');
   $('#update-entry').addClass('hidden');
   $('#create-entry').removeClass('hidden');
