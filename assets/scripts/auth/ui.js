@@ -64,6 +64,8 @@ const signOutSuccess = () => {
   $('#entry-container').html('');
   $('#carousel-animals').addClass('hidden');
   $('#message-box').html('');
+  $('.signup-field').val('');
+  $('.signin-field').val('');
 };
 
 module.exports = {
