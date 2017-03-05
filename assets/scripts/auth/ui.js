@@ -66,6 +66,8 @@ const signOutSuccess = () => {
   $('#message-box').html('');
   $('.signup-field').val('');
   $('.signin-field').val('');
+  $('.create-entry-message').text('');
+  $('.update-entry-message').text('');
 };
 
 module.exports = {
