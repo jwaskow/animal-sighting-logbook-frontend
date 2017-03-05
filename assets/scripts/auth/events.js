@@ -75,6 +75,9 @@ const addHandlers = () => {
   $('#sign-up-close').on('click', onSignUpClose);
   $('#sign-in-close').on('click', onSignInClose);
   $('#change-pass-close').on('click', onChangePassClose);
+  $('#signUpModal').on('hidden.bs.modal', onSignUpClose);
+  $('#signInModal').on('hidden.bs.modal', onSignInClose);
+  $('#changePassModal').on('hidden.bs.modal', onChangePassClose);
 };
 
 module.exports = {
