@@ -29,6 +29,7 @@ const updateSuccess = () => {
   $('#status-box').text('Entry Successfully Updated');
   $('.update-entry-message').text('');
   $('.update-field').val('');
+  $('.create-field').val('');
   $('#update-entry').addClass('hidden');
   $('#create-entry').removeClass('hidden');
 };

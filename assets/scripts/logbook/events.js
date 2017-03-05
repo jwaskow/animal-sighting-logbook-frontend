@@ -52,6 +52,7 @@ const hideUpdate = () => {
   $('.create-entry-message').text('');
   $('.update-entry-message').text('');
   $('.update-field').val('');
+  $('.create-field').val('');
   $('#update-entry').addClass('hidden');
   $('#create-entry').removeClass('hidden');
 };
