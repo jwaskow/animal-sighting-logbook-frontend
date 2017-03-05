@@ -52,11 +52,29 @@ const onSignOut = function (event) {
     .catch(ui.failure);
 };
 
+const onSignUpClose = () => {
+  $('.signup-field').val('');
+  $('#sign-up-message').text('');
+};
+
+const onSignInClose = () => {
+  $('.signin-field').val('');
+  $('#sign-in-message').text('');
+};
+
+const onChangePassClose = () => {
+  $('.change-pass-field').val('');
+  $('#change-pass-message').text('');
+};
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
   $('#sign-out').on('click', onSignOut);
+  $('#sign-up-close').on('click', onSignUpClose);
+  $('#sign-in-close').on('click', onSignInClose);
+  $('#change-pass-close').on('click', onChangePassClose);
 };
 
 module.exports = {
